@@ -33,13 +33,13 @@ const Audios: React.FC = () => {
                     <table className="min-w-full text-sm text-left text-gray-700 bg-white">
                                     <thead className="bg-gray-100 text-gray-800">
                                         <tr>
-                                            <th className="px-6 py-3">Szám</th>
-                                            <th className="px-6 py-3">A mű címe</th>
-                                            <th className="px-6 py-3">Műfaja</th>
-                                            <th className="px-6 py-3">Megalkotásának éve</th>
-                                            <th className="px-6 py-3">Az elhangzás ideje</th>
-                                            <th className="px-6 py-3">Mely program keretében</th>
-                                            <th className="px-6 py-3">Előadók</th>
+                                            <th className="px-4 py-3">Szám</th>
+                                            <th className="px-4 py-3">A mű címe</th>
+                                            <th className="px-4 py-3">Műfaja</th>
+                                            <th className="px-4 py-3">Megalkotásának éve</th>
+                                            <th className="px-4 py-3">Az elhangzás ideje</th>
+                                            <th className="px-4 py-3">Mely program keretében</th>
+                                            <th className="px-4 py-3">Előadók</th>
                                         </tr>
                                     </thead>
                                     <tbody>
