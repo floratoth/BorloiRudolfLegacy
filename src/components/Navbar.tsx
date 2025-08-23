@@ -40,20 +40,24 @@ const Navbar: React.FC = () => {
             {/* Menu Item 3 with Dropdown */}
             <div className="relative">
               <button
-                onClick={() => toggleDropdown('zenesz')}
+                onClick={() => window.location.href = '/hanganyagok'}
                 className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
               >
                 ZENESZERZŐI MUNKÁSSÁGA
               </button>
-              {dropdownOpen === 'zenesz' && (
-                <div className="absolute right-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg z-10">
-                  <a href="/hanganyagok" className="block px-4 py-2 text-sm hover:bg-gray-200">A ZENESZERZŐI ÉLETÚT BEMUTATÁSA MŰRÉSZLETEKKEL</a>
-                </div>
-              )}
+            </div>
+
+            <div className="relative">
+              <button
+                onClick={() => window.location.href = '/galeria'}
+                className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                GALÉRIA
+              </button>
             </div>
 
             {/* Menu Item 4 with Dropdown */}
-            <div className="relative">
+            {/* <div className="relative">
               <button
                 onClick={() => toggleDropdown('utohatas')}
                 className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
@@ -65,7 +69,7 @@ const Navbar: React.FC = () => {
                   <a href="/forum" className="block px-4 py-2 text-sm hover:bg-gray-200">FÓRUM</a>
                 </div>
               )}
-            </div>
+            </div> */}
 
             {/* Menu Item 5 */}
             <a href="/kapcsolat" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">KAPCSOLAT</a>

@@ -13,7 +13,7 @@ export default function Home() {
 
       {/* Korai élet és tanulmányok */}
       <div className="mb-12 text-center">
-        <h3 className="text-2xl font-bold mb-4">Korai élet és tanulmányok</h3>
+        <h3 className="text-2xl font-bold mb-4">Gyermekkor és tanulmányok</h3>
         <p className="text-base leading-relaxed max-w-2xl mx-auto">
           Borlói Rudolf 1927. október 13-án második fiúként született egy katolikus polgári családba. Édesapja jogászember, édesanyja háztartásbeli volt.
           <br /><br />
