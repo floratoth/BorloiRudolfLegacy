@@ -3,10 +3,13 @@
 "use client";
 
 import { useState } from 'react';
+import { useRouter } from "next/navigation";
 
 const Navbar: React.FC = () => {
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null); // Track which dropdown is open
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const router = useRouter();
 
   // Toggle function for dropdown
   const toggleDropdown = (name: string) => {
@@ -25,16 +28,11 @@ const Navbar: React.FC = () => {
             {/* Menu Item 2 with Dropdown */}
             <div className="relative">
               <button
-                onClick={() => { window.location.href = '/muvei'; }}
+                onClick={() => { window.location.href = '/kompozicioi'; }}
                 className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
               >
-                ÉLETMŰVE
+                KOMPOZÍCIÓI
               </button>
-              {/* {dropdownOpen === 'muvei' && (
-                <div className="absolute right-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg z-10">
-                  <a href="/muvei" className="block px-4 py-2 text-sm hover:bg-gray-200">MŰVEI MŰFAJUK ÉS KOMPONÁLÁSI IDEJÜK SZERINT RENDEZVE</a>
-                </div>
-              )} */}
             </div>
 
             {/* Menu Item 3 with Dropdown */}
@@ -55,21 +53,6 @@ const Navbar: React.FC = () => {
                 GALÉRIA
               </button>
             </div>
-
-            {/* Menu Item 4 with Dropdown */}
-            {/* <div className="relative">
-              <button
-                onClick={() => toggleDropdown('utohatas')}
-                className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
-              >
-                ÉLETMŰVÉNEK UTÓHATÁSA
-              </button>
-              {dropdownOpen === 'utohatas' && (
-                <div className="absolute right-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg z-10">
-                  <a href="/forum" className="block px-4 py-2 text-sm hover:bg-gray-200">FÓRUM</a>
-                </div>
-              )}
-            </div> */}
 
             {/* Menu Item 5 */}
             <a href="/kapcsolat" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">KAPCSOLAT</a>
