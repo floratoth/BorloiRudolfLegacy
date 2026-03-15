@@ -54,7 +54,7 @@ export default function Gallery() {
         {images.map((img, idx) => (
           <div
             key={idx}
-            className="w-64 h-64 relative rounded shadow overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+            className="w-64 h-64 relative rounded shadow cursor-pointer transition-transform duration-200 hover:scale-110 hover:z-10"
             onClick={() => setSelectedImage(idx)}
           >
             <Image
@@ -63,7 +63,7 @@ export default function Gallery() {
               fill
               style={{ objectFit: "cover" }}
               sizes="256px"
-              className="rounded"
+              className="rounded hover:brightness-75"
             />
           </div>
         ))}
