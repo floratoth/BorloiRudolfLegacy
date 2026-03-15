@@ -3,18 +3,9 @@
 "use client";
 
 import { useState } from 'react';
-import { useRouter } from "next/navigation";
 
 const Navbar: React.FC = () => {
-  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null); // Track which dropdown is open
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const router = useRouter();
-
-  // Toggle function for dropdown
-  const toggleDropdown = (name: string) => {
-    setDropdownOpen(dropdownOpen === name ? null : name);
-  };
 
   return (
     <nav className="bg-gray-800 text-white">
@@ -23,25 +14,25 @@ const Navbar: React.FC = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex flex-grow items-center justify-center space-x-4">
             {/* Menu Item 1 */}
-            <a href="/" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">ÉLETE</a>
+            <a href="/" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">IDŐREND</a>
 
             {/* Menu Item 2 with Dropdown */}
             <div className="relative">
               <button
-                onClick={() => { window.location.href = '/kompozicioi'; }}
+                onClick={() => { window.location.href = '/katalogus'; }}
                 className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
               >
-                KOMPOZÍCIÓI
+                KATALÓGUS
               </button>
             </div>
 
             {/* Menu Item 3 with Dropdown */}
             <div className="relative">
               <button
-                onClick={() => window.location.href = '/hanganyagok'}
+                onClick={() => window.location.href = '/zene-es-proza'}
                 className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
               >
-                ZENESZERZŐI MUNKÁSSÁGA
+                ZENE ÉS PRÓZA
               </button>
             </div>
 
@@ -75,49 +66,11 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden">
-          <a href="/" className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">ÉLETE</a>
-          <div>
-            <button
-              onClick={() => toggleDropdown('muvei')}
-              className="block w-full px-4 py-2 text-sm text-gray-200 hover:bg-gray-700 text-left"
-            >
-              ÉLETMŰVE
-            </button>
-            {dropdownOpen === 'muvei' && (
-              <div className="pl-4">
-                <a href="/muvei" className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">MŰVEI MŰFAJUK ÉS KOMPONÁLÁSUK IDEJE SZERINT RENDEZVE</a>
-                <a href="/mufaj" className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700"></a>
-                <a href="/komponalas" className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700"></a>
-              </div>
-            )}
-          </div>
-          <div>
-            <button
-              onClick={() => toggleDropdown('zenesz')}
-              className="block w-full px-4 py-2 text-sm text-gray-200 hover:bg-gray-700 text-left"
-            >
-              ZENESZERZŐI MUNKÁSSÁGA
-            </button>
-            {dropdownOpen === 'zenesz' && (
-              <div className="pl-4">
-                <a href="/mureszletek" className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">A ZENESZERZŐI ÉLETÚT BEMUTATÁSA MŰRÉSZLETEKKEL</a>
-              </div>
-            )}
-          </div>
-          <div>
-            <button
-              onClick={() => toggleDropdown('utohatas')}
-              className="block w-full px-4 py-2 text-sm text-gray-200 hover:bg-gray-700 text-left"
-            >
-              ÉLETMŰVÉNEK UTÓHATÁSA
-            </button>
-            {dropdownOpen === 'utohatas' && (
-              <div className="pl-4">
-                <a href="/forum" className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">FÓRUM</a>
-              </div>
-            )}
-          </div>
-          <a href="/contact" className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">KAPCSOLAT</a>
+          <a href="/" className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">IDŐREND</a>
+          <a href="/katalogus" className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">KATALÓGUS</a>
+          <a href="/zene-es-proza" className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">ZENE ÉS PRÓZA</a>
+          <a href="/galeria" className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">GALÉRIA</a>
+          <a href="/kapcsolat" className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">KAPCSOLAT</a>
         </div>
       )}
     </nav>

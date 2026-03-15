@@ -9,7 +9,7 @@ const Audios: React.FC = () => {
 
     return (
         <div className="my-8 px-16">
-            <h1 className="text-2xl font-bold mb-4">Hanganyagok</h1>
+            <h1 className="text-2xl font-bold mb-4">Zene és próza</h1>
 
 
             {/* V. rész*/}
