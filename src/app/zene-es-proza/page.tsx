@@ -222,6 +222,10 @@ const Audios: React.FC = () => {
             )}
 
             {/* I. rész */}
+            <div className="mb-6 mt-8 text-base text-gray-700">
+                <p className="mb-2"><span className="font-semibold">Felvezetés:</span> az azt követő egy vagy két zenei bejátszáshoz kapcsolódó szöveg.</p>
+                <p>Köszönettel tartozunk <span className="font-semibold">HORVÁTH PÉTER</span> versmondónak, aki értékes közreműködésével élővé tette a leírt szöveget.</p>
+            </div>
             <div className="grid grid-cols-1 gap-6 max-w-[50%] w-full mt-8 mb-8">
                     <div className="bg-gray-200 p-4 rounded-lg shadow-md">
                         <h2 className="text-xl font-semibold">Cím</h2>
